@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplates') %> 
+
+    <h3>All Events</h3>
+    <% for(let event of allEvents){%>
+        <div class="wrap neon-outline btn-login join-btn">
+        <div class="event-card ">
+            <li>
+                <a href="/events/<%=event._id%>">
+                    <div class="title">
+                        
+                        <%= event.EvenetName%>
+                    </div>
+                    <div class="sub">
+                        <li>
+                            Squad Mode        
+                        </li>
+                        <li>Entry Fee Applicable</li>
+
+                    </div>
+                </a>
+                    <div>
+                    <form method="GET" action="/events/<%=event._id%>">
+                        <button class="ff-btn join-btn">Join Event</button>
+                    </form>
+                </div>
+            </li>
+    </div>
+    </div>
+    <%}%>
+
+
+
+<form method="GET" action="/events/new">
+    <div class="cta wrap neon-outline">
+        <button class="btn join-btn">Create New Event</button>
+    </div>
+</form>

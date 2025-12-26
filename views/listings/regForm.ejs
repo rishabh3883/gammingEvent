@@ -1,0 +1,84 @@
+<% layout('layouts/boilerplates') %>
+
+<div class="wrap neon-outline">
+ <h3>Registered Teams: <%= event.registeredTeams.length %> / 12</h3>
+ <% if (event.registeredTeams.length < 12) { %>
+    <h4>Register Your Team</h4>
+   <form method="POST" action="/events/<%= event._id %>/register" id="registrationForm">
+        
+        <div class="mb-3">
+            <label for="teamName" class="form-label">Team Name</label>
+            <input type="text" 
+            name= "registeredTeams[teamName]" 
+            id="teamName" 
+    
+        class="form-control" 
+            required
+            >
+        </div>
+        <div class="mb-3">
+            <label for="region" class="form-label">Region</label>
+             <input type="text" 
+                name="registeredTeams[region]" 
+                id="region" 
+    
+        class="form-control" 
+                required
+                >
+        </div>
+
+        <hr>
+        <h4>Team Members</h4>
+
+        <div class="row mb-2">
+            <div class="col">
+                <label class="form-label">Member 1 Gamertag</label>
+                <input type="text" name="members[0][gamertag]" class="form-control" required>
+            </div>
+            <div class="col">
+                <label class="form-label">Member 1 Real Name</label>
+                <input type="text" name="members[0][realName]" class="form-control">
+            </div>
+        </div>
+        
+        <div class="row mb-2">
+            <div class="col">
+                <label class="form-label">Member 2 Gamertag</label>
+                <input type="text" name="members[1][gamertag]" class="form-control" required>
+            </div>
+            <div class="col">
+                <label class="form-label">Member 2 Real Name</label>
+                <input type="text" name="members[1][realName]" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <label class="form-label">Member 3 Gamertag</label>
+                <input type="text" name="members[2][gamertag]" class="form-control" required>
+            </div>
+            <div class="col">
+                <label class="form-label">Member 3 Real Name</label>
+                <input type="text" name="members[2][realName]" class="form-control">
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col">
+                <label class="form-label">Member 4 Gamertag</label>
+                <input type="text" name="members[3][gamertag]" class="form-control" required>
+            </div>
+            <div class="col">
+                <label class="form-label">Member 4 Real Name</label>
+                <input type="text" name="members[3][realName]" class="form-control">
+            </div>
+        </div>
+        
+        <button class="btn btn-success mt-3" id="registerButton">Register</button>
+    </form>
+<% } else { %>
+    <div class="alert alert-danger" role="alert">
+      Registrations are full!
+</div>
+<% } %>
+</div>

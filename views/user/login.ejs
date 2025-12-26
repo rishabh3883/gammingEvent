@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplates') %> 
+
+    <div class="wrap neon-outline">
+        <form action="/login" method="POST" novalidate class="needs-validation">
+            <div>
+               <label for="username" class="form-label"><b>Username</b><br></label>
+               <input name ="username" 
+                    type ="text" 
+                    class="form-control"
+                    id="username"
+                    required
+                />
+                </div>
+                <br>
+               <label for="password" class="form-label"><b>Password <br></b></label>
+               <input name ="password" 
+                    type ="password" 
+                    class="form-control"
+                    id="password"
+                    required
+                /> 
+             <div class="cta wrap neon-outline">
+          <button class="btn btn-primary">login</button>
+          </div>
+        </form>
+        
+        </div>
+         <div class="cta wrap neon-outline">
+          <button class="btn btn-primary">Create New Account</button>
+            </div>

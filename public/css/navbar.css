@@ -1,0 +1,112 @@
+/* Basic reset and body background */
+body {
+    font-family: Poppins,system-ui,Arial;
+    background-color: #121212; /* Dark background to match image */
+    color: white;
+    margin: 0;
+    padding: 20px; /* Page padding */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Navbar Container */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b; /* Dark navbar background */
+    padding:6px 12px;
+    border-radius: 14px;
+    gap: 12px;
+    margin :auto
+
+}
+
+/* Left Side: Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    /* Re-creating the purple-pink gradient from the image */
+    background: linear-gradient(145deg, #a855f7, #f472b6);
+    
+    /* Centering the 'G' */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo-subtitle {
+    font-size: 0.8rem;
+    color: #a0a0a0; /* Light gray for subtitle */
+}
+
+/* Right Side: Links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-links a {
+    color: #c0c0c0; /* Light gray for plain links */
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Button Styles ("Signup" and "Login") */
+.nav-btn {
+    background-color: #2a2a2a; /* Dark gray button */
+    color: #ffffff !important; /* White text */
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #444; /* Subtle border */
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+
+.main-nav a:hover {
+    color: #8a2be2; 
+}
+
+.btn-login{padding:8px 14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:transparent;
+    color:#fff
+}

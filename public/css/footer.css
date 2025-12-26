@@ -1,0 +1,74 @@
+html,body{
+    height:100%;
+    margin:0;
+    font-family:Poppins,system-ui,Arial;
+    background:linear-gradient(180deg,#07070a 0%, #0f0f12 100%);
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* --- Footer Styling --- */
+
+.site-footer {
+    /* Dark background jo navbar se match karega */
+    background-color: #222; 
+    
+    /* Light text color */
+    color: #ccc; 
+    
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: auto; /* Yeh footer ko page ke neeche rakhega (agar main content kam hai) */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Social Icons --- */
+.footer-social a {
+    color: #f5f5f5; /* White icons */
+    margin: 0 12px;
+    font-size: 1.5rem; /* Icon size */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    /* Yeh purple color aapke 'G' logo se match karega */
+    color: #8a2be2; 
+}
+
+/* --- Footer Links (Privacy/Terms) --- */
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #f5f5f5; /* White links */
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8a2be2; /* Same purple hover */
+}
+
+/* --- Copyright Text --- */
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #aaa; /* Thoda halka text color */
+    margin-top: 20px;
+}
+
+/* --- Font Awesome Icons (Agar aapne add nahi kiye hain) --- */
+/* Yeh class Font Awesome ke liye hai, jo icons dikhati hai */
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}

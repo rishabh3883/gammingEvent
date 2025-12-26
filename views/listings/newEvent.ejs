@@ -1,0 +1,51 @@
+<% layout('layouts/boilerplates') %> 
+<div class="wrap neon-outline" > 
+<h2>Create New Event</h2>
+
+  <form action="/events" method="POST" novalidate class="needs-validation">
+    
+    <div>
+        <label for="name"><b>Event Name:</b><br></label>
+        <input type="text" id="name" name="event[EvenetName]" class="form-control" required>
+        <div class="valid-feedback">
+        Looks Good!.
+      </div>
+    </div>
+
+    <div>
+        <label for="fees"><b>Entry Fees:</b><br></label>
+        <input type="number" id="fees" name="event[EntryFees]" class="form-control" required>
+        <div class="invalid-feedback">
+        Must Enter Entry Fees!.
+      </div>
+    </div>
+
+    <div>
+        <label for="price1"><b>First Prize:</b><br></label>
+        <input type="number" id="price1" name="event[FirstPrize]" class="form-control" required>
+        <div class="invalid-feedback">
+        Please Enter the price Money.
+      </div>
+    </div>
+    
+    <div>
+        <label for="price2"><b>Second Prize:</b><br></label>
+        <input type="number" id="price2" name="event[SecondPrize]" class="form-control" required>
+        <div class="invalid-feedback">
+        Please Enter the price Money.
+      </div>
+    </div>
+
+    <div>
+        <label for="price3"><b>Third Prize:</b><br></label>
+        <input type="number" id="price3" name="event[ThirdPrize]" class="form-control" required>
+        <div class="invalid-feedback">
+        Please Enter the price Money.
+      </div>
+    </div>
+
+    <div class="cta wrap neon-outline">
+        <button class="btn btn-primary"> Add </button>
+    </div>
+</form>
+</div>

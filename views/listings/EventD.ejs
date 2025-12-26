@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplates') %>
+<%= success %>
+
+<div class="wrap neon-outline btn-login join-btn">
+<div class="event-card ">
+<h3>Event Details : </h3>
+<ul>
+    <li> <h3>Event Name :<%= event.EvenetName %></h3></li>
+    <li><b>Entry Fees = </b>    &#8377;<%= event.EntryFees.toLocaleString("en-IN") %></li>
+    <li><b>First Price = </b>    &#8377;<%= event.FirstPrize.toLocaleString("en-IN") %></li>
+    <li><b>Second price = </b>    &#8377;<%= event.SecondPrize.toLocaleString("en-IN") %></li>
+    <li><b>Third price = </b>    &#8377;<%= event.ThirdPrize.toLocaleString("en-IN") %></li>
+</ul>
+
+<form method="GET" action="/events/<%=event._id%>/register">
+<button class="btn join-btn">Join Event</button>
+
+</form>
+</div>
+</div>
+
+<form method="POST" action="/events/<%= event._id%>?_method=DELETE">
+    <div class="cta wrap neon-outline">
+        <button class="btn join-btn">Delete</button>
+    </div>
+</form>
+
